@@ -1,14 +1,10 @@
 <template>
 
   <div class="category">
-    <template v-for="category in categories">
-      <CategoryComponent :name="category.name" :amount="category.amount" :color="category.color" :image="category.image" ></CategoryComponent>
-    </template>
+    <CategoryComponent v-for="category in categories" :key="category.name" :name="category.name" :amount="category.amount" :color="category.color" :image="category.image" ></CategoryComponent>
   </div>
   <div class="promotion">
-    <template v-for="promotion in Promotions">
-      <PromotionComponent :title="promotion.title" :color="promotion.color" :image="promotion.image"></PromotionComponent>
-    </template>
+    <PromotionComponent v-for="promotion in promotions" :key="promotion.title" :title="promotion.title" :color="promotion.color" :image="promotion.image"></PromotionComponent>
   </div>
   
   
